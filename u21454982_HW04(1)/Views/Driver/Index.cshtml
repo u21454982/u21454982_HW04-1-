@@ -1,0 +1,32 @@
+﻿@model List<u21454982_HW04_1_.ViewModels.DriverViewModel>
+@{
+    ViewBag.Title = "Driver";
+}
+
+<h2>Driver Requests</h2>
+
+<table>
+    <tr>
+        <th>Job Description</th>
+        <th>Age</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Driving Experience </th>
+        <th>Lisence Age</th>
+        <th>Information</th>
+        <th>Statements</th>
+    </tr>
+    @foreach (var driver in Model)
+    {
+        <tr>
+            <td>@driver.JobDescription</td>
+            <td>@driver.Age</td>
+            <td>@driver.Name</td>
+            <td>@driver.Surname</td>
+            <td>@driver.DrivingExp</td>
+            <td>@driver.LisenceAge</td>
+            <td>@driver.getInfo()</td>
+            <td>@driver.Jobless()</td>
+        </tr>
+    }
+</table>

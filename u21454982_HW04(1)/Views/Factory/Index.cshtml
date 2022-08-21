@@ -1,0 +1,32 @@
+﻿@model List<u21454982_HW04_1_.ViewModels.FactoryViewModel>
+@{
+    ViewBag.Title = "Factory";
+}
+
+<h2>Factory request</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Age</th>
+        <th>Factory Experience</th>
+        <th>Machinery Skill</th>
+        <th>Information</th>
+        <th>Statements</th>
+
+    </tr>
+    @foreach (var factory in Model)
+    {
+        <tr>
+            <td>@factory.Name</td>
+            <td>@factory.Surname</td>
+            <td>@factory.Age</td>
+            <td>@factory.FactoryExp</td>
+            <td>@factory.MachinerySkill</td>
+            <td>@factory.getInfo()</td>
+            <td>@factory.Jobless()</td>
+        </tr>
+    }
+</table>
+

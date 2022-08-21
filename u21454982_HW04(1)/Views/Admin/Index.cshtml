@@ -1,0 +1,31 @@
+﻿@model List<u21454982_HW04_1_.ViewModels.AdminViewModel>
+@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Admin Requests</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Age</th>
+        <th>Admin Experience</th>
+        <th>Communication Skills</th>
+
+        <th>Information</th>
+        <th>Statements</th>
+    </tr>
+    @foreach (var admin in Model)
+    {
+<tr>
+    <td>@admin.Name</td>
+    <td>@admin.Surname</td>
+    <td>@admin.Age</td>
+    <td>@admin.AdminExp</td>
+    <td>@admin.CommunicationSkill</td>
+
+    <td>@admin.getInfo()</td>
+    <td>@admin.Jobless()</td>
+</tr>
+    }
+</table>
